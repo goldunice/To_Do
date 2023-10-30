@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bitiruvchi talabalar rejalari</title>
+</head>
+<body>
+<h1>Bitiruvchi talabalar rejalari ro'yxati</h1>
+<hr>
+
+<ol>
+    {% for p in g_s_p %}
+    <li>
+        <h2>Title - {{p.title}}, Date - {{p.date}}, Detail - {{p.detail}}, IsDone - {{p.isDone}}, Student_name - {{p.student_id}}</h2>
+    </li>
+    {% endfor %}
+</ol>
+
+</body>
+</html>

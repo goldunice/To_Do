@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tanlangan talaba rejalari</title>
+</head>
+<body>
+<h1>Tanlangan talaba rejalari</h1>
+<hr>
+<ol>
+    {% for p in student_plans %}
+    <li>
+        <h2>Title - {{p.title}}, Date - {{p.date}}, Detail - {{p.detail}}, IsDone - {{p.isDone}}, Student_ID -
+            {{p.student_id}}</h2>
+    </li>
+    {% endfor %}
+</ol>
+</body>
+</html>

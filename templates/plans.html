@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Barcha rejalar</title>
+</head>
+<body>
+<h1>Barcha rejalar ro'yxati</h1>
+<hr>
+
+<ol>
+    {% for p in plans %}
+    <li>
+        <h2>Title - {{p.title}}, Date - {{p.date}}, Detail - {{p.detail}}, IsDone - {{p.isDone}}, Student_ID - {{p.student_id}}</h2>
+        <a href="/delete_plan/{{p.id}}/"><button>O'chirish</button></a>
+    </li>
+    {% endfor %}
+</ol>
+<hr>
+<form method="post">
+    {% csrf_token %}
+    {{ plan_form.as_p }}
+    <button>Qo'shish</button>
+</form>
+</body>
+</html>

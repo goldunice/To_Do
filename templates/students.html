@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Barcha talabalar</title>
+</head>
+<body>
+<h1>Barcha talabalar ro'yxati</h1>
+<hr>
+<ol>
+    {% for s in students %}
+
+    <li>
+        <h2>Name - {{s.name}},Age - {{s.age}},Source - {{s.course }}, Student_number - {{s.student_number}}</h2>
+        <a href="/student_plans/{{s.id}}/"><button>Ko'rish</button></a>
+    </li>
+
+    {% endfor %}
+</ol>
+
+</body>
+</html>
+<!--&#45;&#45; s.age &#45;&#45; &#45;&#45; s.student_number-->
