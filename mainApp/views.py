@@ -20,7 +20,7 @@ def elder_students(request):
 
 def student_plans(request, num):
     content = {
-        "student_pans": Plan.objects.filter(id=num)
+        "student_plans": Plan.objects.filter(student_id=num)
     }
     return render(request, 'student_plans.html', content)
 
